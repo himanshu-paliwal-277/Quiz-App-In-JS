@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://play-lh.googleusercontent.com/WkK8-_NYDo0f15qfGsZnn4iZ9G7Q-MMloycE5mdnClbUNnkQ50hZrkWi5xxubg5_F8E" type="image/x-icon">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen w-full">
+    <div class="w-2/5 bg-white shadow-md rounded-lg p-7">
+        <div id="quiz-container">
+            <div class="bg-black text-white flex flex-col items-center py-4 rounded mb-6 text-lg">
+                <h1 class="text-2xl font-bold mb-4">Quiz App</h1>
+                <div class="flex justify-between w-full px-4">
+                    <span>Questions: <span id="current-question">1</span> / 10</span>
+                    <span>Score: <span id="current-score">0</span></span>
+                </div>
+            </div>
+            <h2 id="question" class="text-xl font-semibold mb-2"></h2>
+            <div id="options" class="mt-4">
+                <!-- Options will be dynamically added here -->
+            </div>
+            <div class="flex justify-center mt-4">
+                <button id="next-btn" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded font-semibold" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+        <div id="result-container" class="hidden flex flex-col items-center">
+            <h2 class="text-xl font-semibold">Your Score: <span id="score"></span>/50</h2>
+            <button class="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
